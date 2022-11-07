@@ -1,0 +1,50 @@
+[
+    {
+      "id":"1",
+      "picture": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/77/22/11/amiakhum.jpg?w=500&h=-1&s=1",
+      "price": 219,
+      "placeName": "Bandarban",
+      "tripDetails": "Ea esse laboris anim esse dolore officia sit non commodo enim sit non nulla sunt. Do qui enim nisi adipisicing amet laborum eu. Aliqua ea laboris laborum non reprehenderit cupidatat. Et pariatur proident ullamco pariatur cillum et eiusmod ex qui elit. Elit elit ad do proident cillum labore sunt non adipisicing voluptate adipisicing. Mollit commodo labore tempor duis fugiat ad exercitation quis fugiat. Quis laborum minim laboris commodo deserunt enim labore est cillum aliqua incididunt.\r\n",
+      "rating": 3
+    },
+    {
+      "id":"2",
+      "picture": "https://cdn.bangladeshscenictours.com/wp-content/uploads/2019/11/Exploring-Coxs-Bazar-990x490.jpg",
+      "price": 207,
+      "placeName": "Coxsbazar",
+      "tripDetails": "Enim aliqua elit deserunt nostrud incididunt aliquip sit amet aliquip et cillum non. Amet exercitation enim irure commodo tempor tempor. Non eiusmod occaecat cupidatat nisi fugiat pariatur enim velit in mollit commodo. Nostrud ut eiusmod amet sint officia consequat. Dolor pariatur ea laboris ipsum pariatur anim adipisicing Lorem et excepteur magna.\r\n",
+      "rating": 5
+    },
+    {
+      "id":"3",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/9/95/Kaptai_Lake_%2819833365911%29.jpg",
+      "price": 218,
+      "placeName": "Rangamati",
+      "tripDetails": "Irure tempor labore qui in. Anim voluptate ut anim aliquip anim et excepteur pariatur enim minim. Non qui tempor eu duis adipisicing. Laborum Lorem ullamco non occaecat dolor reprehenderit voluptate quis voluptate cupidatat id. Amet aute minim veniam eu tempor enim velit amet incididunt laboris fugiat reprehenderit aliqua ea. Cupidatat enim mollit fugiat quis officia quis cillum duis ullamco quis.\r\n",
+      "rating": 4
+    },
+    {
+      "id":"4",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6mUMqYAOGBKqam52VHniYlJF2ph11-9EfoCY7oriC4rfKjlHz8BQT0SK8AVOFEijAwHc&usqp=CAU",
+      "price": 214,
+      "placeName": "Sajek",
+      "tripDetails": "Est enim reprehenderit commodo commodo magna sit duis. Ipsum eiusmod eiusmod reprehenderit fugiat consectetur. Tempor adipisicing laboris laboris incididunt occaecat aliqua excepteur proident reprehenderit ullamco.\r\n",
+      "rating": 3
+    },
+    {
+      "id":"5",
+      "picture": "https://porzoton.com/wp-content/uploads/2020/09/Tanguar-Haor.jpg",
+      "price": 260,
+      "placeName": "Tanguar Haor",
+      "tripDetails": "Qui laboris quis id dolore dolor do. Non sit amet velit amet esse minim esse mollit elit consectetur. Nisi sint proident pariatur nulla elit anim dolor proident consectetur. Ullamco in excepteur deserunt do proident exercitation aliqua non quis amet. Ipsum occaecat exercitation non eu veniam occaecat aute esse elit.\r\n",
+      "rating": 3
+    },
+    {
+      "id":"6",
+      "picture": "https://sgp1.digitaloceanspaces.com/cosmosgroup/news/1768701_niladri-lake-sunamganj.jpg",
+      "price": 234,
+      "placeName": "Niladri Lake",
+      "tripDetails": "Velit nostrud dolor dolor in nulla officia reprehenderit irure ad ad ullamco ea laboris velit. Officia non ex quis aliqua ea tempor fugiat laboris. Occaecat aliquip proident cillum ad amet veniam ad ad. Tempor in consequat quis ullamco Lorem officia Lorem velit cupidatat sint aliqua qui labore non. Minim pariatur exercitation quis dolore. Sit aute nulla amet occaecat exercitation.\r\n",
+      "rating": 4
+    }
+  ]
