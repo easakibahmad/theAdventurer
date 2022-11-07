@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { AuthContext } from "../../../Context/AuthProvider";
+import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -23,8 +24,8 @@ const Header = () => {
       className="navbar flex justify-between bg-base-100 shadow-2xl"
     >
       <div>
-        <Link className="btn btn-ghost normal-case text-xl">
-          The Adventurer
+        <Link className="btn btn-ghost normal-case text-2xl">
+          <span className="header-text">The Adventurer</span>
         </Link>
         <div className="lg:block hidden">
           <Link className="lg:px-4 link-accent" to="/">

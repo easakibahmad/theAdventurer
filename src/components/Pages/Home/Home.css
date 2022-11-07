@@ -1,0 +1,23 @@
+.home{
+    background-image: url('../../../assets/images/banner-background.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+}
+
+.text-banner{
+    font-family: 'Heebo', sans-serif;
+
+}
+
+@media screen and (max-width: 900px) {
+    .home{
+        height: 450px;
+    }    
+  }
+  @media screen and (max-width: 600px) {
+    .home{
+        height: 400px;
+    }    
+  }

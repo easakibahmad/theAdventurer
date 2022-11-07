@@ -116,7 +116,7 @@ const Login = () => {
       <div className="flex justify-center">
         <button
           onClick={handlePopUpSignInGoogle}
-          className="mt-2 text-white btn btn-secondary buttonSign bg-stone-700"
+          className="mt-2 text-white btn btn-primary buttonSign bg-stone-700"
         >
           <FaGoogle></FaGoogle>
           <span className="ml-2">Google Sign In</span>
