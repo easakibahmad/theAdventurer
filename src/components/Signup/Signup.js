@@ -59,7 +59,7 @@ const Signup = () => {
   };
 
   return (
-    <div data-theme="garden" className=" pt-4 pb-12 shadow-xl">
+    <div className=" p-16 shadow-md">
       <div className="hero">
         <div data-theme="forest" className="hero-content rounded flex-col">
           <div className="text-center lg:text-left">

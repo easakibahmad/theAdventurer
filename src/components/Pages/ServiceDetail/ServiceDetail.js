@@ -67,7 +67,7 @@ const ServiceDetail = () => {
   };
 
   return (
-    <div className="md:px-12 sm:px-6 px-2 py-12">
+    <div className="md:px-12 shadow-md sm:px-6 px-2 py-12">
       <p className="md:text-4xl text-center sm:text-2xl text-xl font-bold text-black">
         Visit now {placeName}!
         <span className="text-red-400"> We are always with you.</span>

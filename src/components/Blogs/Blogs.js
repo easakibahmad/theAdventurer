@@ -2,7 +2,7 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div className="md:py-16 sm:py-12 py-8 lg:px-16 md:px-12 sm:px-8 px-2">
+    <div className="md:py-16 shadow-md sm:py-12 py-8 lg:px-16 md:px-12 sm:px-8 px-2">
       <h1 className="md:text-4xl text-center sm:text-2xl text-md font-bold text-black">
         Here are some important{" "}
         <span className="text-red-400">questions and answers!!</span>

@@ -35,7 +35,7 @@ const MyReview = () => {
   };
   //   console.log(review);
   return (
-    <div className="md:py-16 sm:py-12 py-8 lg:px-12 sm:px-8 px-2">
+    <div className="md:py-16 shadow-md sm:py-12 py-8 lg:px-12 sm:px-8 px-2">
       {review[0]?._id && (
         <p className="md:text-4xl text-center sm:text-2xl text-xl font-bold text-black">
           You have a total of{" "}

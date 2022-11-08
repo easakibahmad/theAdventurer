@@ -19,34 +19,34 @@ const Header = () => {
       });
   };
   return (
-    <div
-      data-theme="forest"
-      className="navbar flex justify-between bg-base-100 shadow-2xl"
-    >
+    <div className="navbar flex justify-between bg-base-100 shadow-xl">
       <div>
-        <Link className="btn btn-ghost normal-case text-2xl">
+        <Link className="btn btn-ghost normal-case text-2xl ">
           <span className="header-text">The Adventurer</span>
         </Link>
         <div className="lg:block hidden">
-          <Link className="lg:px-4 link-accent" to="/">
+          <Link className="lg:px-4 text-red-500 header-link" to="/">
             Home
           </Link>
-          <Link className="lg:px-4 link-accent" to="/blogs">
+          <Link className="lg:px-4 text-red-500 header-link" to="/blogs">
             Blogs
           </Link>
-          <Link to="/myreview" className="lg:px-4  link-accent">
+          <Link to="/myreview" className="lg:px-4  text-red-500 header-link">
             My Reviews
           </Link>
-          <Link to="/addservice" className="lg:px-4 link-accent">
+          <Link to="/addservice" className="lg:px-4 text-red-500 header-link">
             Add Service
           </Link>
           {!user?.uid ? (
-            <Link className="lg:px-4  link-accent" to="/login">
+            <Link className="lg:px-4  text-red-500 header-link" to="/login">
               Login
             </Link>
           ) : (
             <>
-              <Link className="lg:px-4 link-accent" onClick={handleLogOut}>
+              <Link
+                className="lg:px-4 text-red-500 header-link"
+                onClick={handleLogOut}
+              >
                 Logout
               </Link>
             </>
@@ -63,25 +63,28 @@ const Header = () => {
             tabIndex={0}
             className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32 px-4 py-2"
           >
-            <Link className="link-accent" to="/">
+            <Link className="text-red-500 header-link" to="/">
               Home
             </Link>
-            <Link className="lg:px-4 link-accent" to="/blogs">
+            <Link className="lg:px-4 text-red-500 header-link" to="/blogs">
               Blogs
             </Link>
-            <Link to="/myreview" className="lg:px-4  link-accent">
+            <Link to="/myreview" className="lg:px-4  text-red-500 header-link">
               My Reviews
             </Link>
-            <Link to="/addservice" className="lg:px-4 link-accent">
+            <Link to="/addservice" className="lg:px-4 text-red-500 header-link">
               Add Service
             </Link>
             {!user?.uid ? (
-              <Link className="link-accent" to="/login">
+              <Link className="text-red-500 header-link" to="/login">
                 Login
               </Link>
             ) : (
               <>
-                <Link className="lg:px-4  link-accent" onClick={handleLogOut}>
+                <Link
+                  className="lg:px-4  text-red-500 header-link"
+                  onClick={handleLogOut}
+                >
                   Logout
                 </Link>
               </>
@@ -103,7 +106,10 @@ const Header = () => {
             >
               <li>
                 {user?.uid && (
-                  <Link className="lg:px-4 link-accent" onClick={handleLogOut}>
+                  <Link
+                    className="lg:px-4 text-red-500 header-link"
+                    onClick={handleLogOut}
+                  >
                     Logout
                   </Link>
                 )}

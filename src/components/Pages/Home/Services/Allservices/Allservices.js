@@ -9,7 +9,7 @@ const Allservices = () => {
       .then((data) => setAllServices(data));
   }, []);
   return (
-    <div className="md:px-12 py-8 md:py-16">
+    <div className="md:px-12 py-8 shadow-md md:py-16">
       <p className="md:text-4xl md:text-start text-center text-2xl font-bold text-black">
         All <span className="text-red-400">Services</span>
       </p>

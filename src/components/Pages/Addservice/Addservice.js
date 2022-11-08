@@ -43,7 +43,7 @@ const Addservice = () => {
   };
 
   return (
-    <div className="flex justify-center lg:my-16 my-8">
+    <div className="flex justify-center shadow-md  lg:py-16 py-8">
       <div className="md:w-2/5 w-4/5 ">
         <p className="md:text-3xl mb-4 text-center  text-xl font-bold text-black">
           Add <span className="text-red-400">your</span> desired

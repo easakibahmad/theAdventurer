@@ -5,7 +5,7 @@ import bottomImg from "../../../assets/images/footer-img.jpeg";
 
 const Footer = () => {
   return (
-    <footer data-theme="forest">
+    <footer className="border-t">
       <div className=" flex justify-center">
         <div className="py-8">
           <div className="">

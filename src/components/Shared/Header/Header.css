@@ -4,3 +4,7 @@
 .dropdown-icon{
     cursor: pointer;
 }
+
+.header-link:hover{
+    color: black;
+}
