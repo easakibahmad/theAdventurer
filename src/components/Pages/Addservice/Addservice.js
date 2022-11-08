@@ -3,10 +3,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Addservice = () => {
-  const serviceToast = () => {
-    toast(`Service added successfully!!`);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -38,6 +34,8 @@ const Addservice = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
+          toast(`Service added successfully!!`);
+
           form.reset();
         }
       })
@@ -87,24 +85,22 @@ const Addservice = () => {
             required
           ></textarea>
           <div className="flex justify-center">
-            <button
-              onClick={() => serviceToast()}
-              className="bg-red-400 px-3 py-2 font-bold mt-2 rounded-md text-sm"
-            >
+            <button className="bg-red-400 px-3 py-2 font-bold mt-2 rounded-md text-sm">
               Add service
-              <ToastContainer
-                position="top-center"
-                autoClose={2000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-              ></ToastContainer>
             </button>
+
+            <ToastContainer
+              position="top-center"
+              autoClose={2000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            ></ToastContainer>
           </div>
         </form>
       </div>
