@@ -6,18 +6,18 @@ import Service from "./Service/Service";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   return (
-    <div className="px-12 py-16">
-      <p className="text-4xl font-bold text-white">
+    <div className="md:px-12 py-8 md:py-16">
+      <p className="md:text-4xl text-2xl font-bold text-white">
         Our <span className="text-red-400">Services</span>
       </p>
-      <div className="grid grid-cols-3 gap-4 pt-12">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 md:gap-8 lg:pt-12 md:pt-8 pt-4">
         {services.map((service) => (
-          <Service key={service.id} service={service}></Service>
+          <Service key={service._id} service={service}></Service>
         ))}
       </div>
       <div className="flex justify-center lg:pt-16 sm:pt-12 pt-10">
