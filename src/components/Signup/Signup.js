@@ -22,11 +22,12 @@ const Signup = () => {
     const photoURL = form.photoURL.value;
     console.log(email, password);
 
-    const handleProfileInfo = (name, photoURL) => {
-      const profile = {
-        displayName: name,
-        photoURL: photoURL,
-      };
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+
+    const handleProfileInfo = () => {
       updateUserProfile(profile)
         .then(() => {
           console.log("updated");
@@ -48,7 +49,7 @@ const Signup = () => {
         form.reset();
         setError("");
         form.reset();
-        handleProfileInfo(name, photoURL);
+        handleProfileInfo();
         navigate(from, { replace: true });
       })
       .catch((error) => {

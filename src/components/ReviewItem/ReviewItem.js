@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const ReviewItem = ({ item }) => {
+  const { user } = useContext(AuthContext);
   const { opinion, reviewerName, reviewerPhoto } = item;
-
+  console.log(user);
   return (
     <div className="border w-4/5 mx-auto p-2 rounded">
       <div className="flex justify-start items-center">
