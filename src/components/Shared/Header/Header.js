@@ -31,6 +31,9 @@ const Header = () => {
           <Link className="lg:px-4 link-accent" to="/">
             Home
           </Link>
+          <Link className="lg:px-4 link-accent" to="/blogs">
+            Blogs
+          </Link>
           <Link className="lg:px-4  link-accent">My Reviews</Link>
           <Link to="/addservice" className="lg:px-4 link-accent">
             Add Service
@@ -48,7 +51,7 @@ const Header = () => {
           )}
         </div>
 
-        <div className="dropdown dropdown-bottom md:hidden block">
+        <div className="dropdown dropdown-bottom lg:hidden block">
           <label className="text-2xl" tabIndex={0}>
             <HiMenuAlt1></HiMenuAlt1>
           </label>
@@ -59,12 +62,15 @@ const Header = () => {
             <Link className="link-accent" to="/">
               Home
             </Link>
+            <Link className="lg:px-4 link-accent" to="/blogs">
+              Blogs
+            </Link>
             <Link className="lg:px-4  link-accent">My Reviews</Link>
             <Link to="/addservice" className="lg:px-4 link-accent">
               Add Service
             </Link>
             {!user?.uid ? (
-              <Link className="py-2  link-accent" to="/login">
+              <Link className="link-accent" to="/login">
                 Login
               </Link>
             ) : (

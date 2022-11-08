@@ -5,20 +5,20 @@ const ServiceDetail = () => {
   const individualData = useLoaderData();
   const { _id, picture, placeName, price, rating, tripDetails } =
     individualData;
-  console.log(_id);
+  //   console.log(_id);
   return (
     <div className="md:px-12 sm:px-6 px-2 py-12">
-      <p className="md:text-4xl text-center text-2xl font-bold text-black">
+      <p className="md:text-4xl text-center sm:text-2xl text-xl font-bold text-black">
         Visit now {placeName}!
         <span className="text-red-400"> We are always with you.</span>
       </p>
 
       {/* top section */}
-      <div>
+      <section>
         <div className="grid grid-cols-2 py-12 gap-8">
           <div>
             <img
-              className="rounded"
+              className="rounded w-full lg::h-52 md:h-48 sm:h-36 h-32"
               src={picture ? picture : "not found"}
               alt="url invalid"
             />
@@ -63,9 +63,22 @@ const ServiceDetail = () => {
           <br />
           <span className="text-sm">{tripDetails}</span>
         </div>
-      </div>
+      </section>
 
       {/* bottom section */}
+
+      <section className="py-16 gap-8">
+        <p className="md:text-4xl text-center sm:text-2xl text-xl font-bold text-black">
+          Top <span className="text-red-400">reviews</span>
+        </p>
+        <div className="grid grid-cols-2">
+          <div>
+            reviewer <br />
+            text <br />
+            reviewer image
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
