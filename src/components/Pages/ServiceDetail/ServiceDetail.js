@@ -23,7 +23,7 @@ const ServiceDetail = () => {
       .then((data) => setReviewData(data));
   }, [_id]);
 
-  console.log(reviewData);
+  //   console.log(reviewData);
   const handleSubmit = (event) => {
     event.preventDefault();
 
