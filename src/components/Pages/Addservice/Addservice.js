@@ -25,7 +25,7 @@ const Addservice = () => {
       rating,
     };
 
-    console.log(service);
+    // console.log(service);
     // form.reset();
 
     fetch("http://localhost:5000/service", {
