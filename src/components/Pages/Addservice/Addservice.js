@@ -59,14 +59,14 @@ const Addservice = () => {
           />
           <input
             type="text"
-            placeholder="Provide the picture url"
+            placeholder="Provide the place photo url"
             name="pictureUrl"
             className="input input-bordered my-2 input-accent w-full "
             required
           />
           <input
             type="text"
-            placeholder="Enter the price"
+            placeholder="Provide the place trip cost"
             name="price"
             className="input input-bordered my-2 input-accent w-full"
             required
