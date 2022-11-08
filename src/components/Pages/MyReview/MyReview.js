@@ -9,7 +9,9 @@ const MyReview = () => {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/review?email=${user?.email}`)
+    fetch(
+      `https://the-adventurer-server.vercel.app/review?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, [user?.email]);
@@ -17,7 +19,7 @@ const MyReview = () => {
   const handleDelete = (id) => {
     const proceedToDelete = window.confirm("Are you sure to delete?");
     if (proceedToDelete) {
-      fetch(`http://localhost:5000/review/${id}`, {
+      fetch(`https://the-adventurer-server.vercel.app/review/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

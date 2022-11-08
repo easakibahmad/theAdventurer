@@ -36,7 +36,9 @@ export const router = createBrowserRouter([
         path: "/servicedetail/:id",
         element: <ServiceDetail></ServiceDetail>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(
+            `https://the-adventurer-server.vercel.app/services/${params.id}`
+          ),
       },
       {
         path: "/blogs",
