@@ -6,6 +6,7 @@ import Allservices from "../components/Pages/Home/Services/Allservices/Allservic
 import Signup from "../components/Signup/Signup";
 
 import Layout from "../Layout/Layout";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/addservice",
-        element: <Addservice></Addservice>,
+        element: (
+          <PrivateRoute>
+            <Addservice></Addservice>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
