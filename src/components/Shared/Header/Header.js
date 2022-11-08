@@ -38,7 +38,9 @@ const Header = () => {
           ) : (
             <>
               <Link className="lg:px-4  link-accent">My Reviews</Link>
-              <Link className="lg:px-4 link-accent">Add Service</Link>
+              <Link to="/addservice" className="lg:px-4 link-accent">
+                Add Service
+              </Link>
               <Link className="lg:px-4 link-accent" onClick={handleLogOut}>
                 Logout
               </Link>

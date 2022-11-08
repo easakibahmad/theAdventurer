@@ -7,8 +7,8 @@ const Service = ({ service }) => {
   const { picture, placeName, price, tripDetails, rating } = service;
   return (
     <div className="flex justify-center">
-      <div className="border-r  bg-black text-white w-4/5 sm:w-64 md:w-full">
-        <img className="w-full lg:h-48  h-36" src={picture} alt="" />
+      <div className="border-r-red-700  rounded-xl bg-black text-white w-4/5 sm:w-64 md:w-full">
+        <img className="w-full rounded lg:h-48  h-36" src={picture} alt="" />
         <div className="p-2">
           <div className="font-bold md:text-xl text-md text-red-400">
             {placeName}

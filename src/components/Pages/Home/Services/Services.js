@@ -12,7 +12,7 @@ const Services = () => {
   }, []);
   return (
     <div className="md:px-12 py-8 md:py-16">
-      <p className="md:text-4xl text-2xl font-bold text-white">
+      <p className="md:text-4xl text-center md:text-start text-2xl font-bold text-black">
         Our <span className="text-red-400">Services</span>
       </p>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 md:gap-8 lg:pt-12 md:pt-8 pt-4">
@@ -21,7 +21,7 @@ const Services = () => {
         ))}
       </div>
       <div className="flex justify-center lg:pt-16 sm:pt-12 pt-10">
-        <Link to="">
+        <Link to="/allservices">
           <button className="btn btn-accent text-black">
             <span className="pr-2">See All</span>
             <span className="text-xl">

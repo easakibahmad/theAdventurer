@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="lg:py-16 py-8">
+    <div className="lg:py-24 py-8">
       <div className="text-banner text-center lg:text-4xl sm:text-2xl text-xl text-white font-bold lg:py-20 sm:py-16 py-8">
         Explore <span className="text-red-400">The Adventurer</span>, Enjoy your
         life
