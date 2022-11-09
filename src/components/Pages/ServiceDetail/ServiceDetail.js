@@ -22,6 +22,10 @@ const ServiceDetail = () => {
 
   const [dataLoader, setDataLoader] = useState(true);
 
+  const [specificData, setSpecificData] = useState([]);
+
+  const [newId, setNewId] = useState("");
+
   useEffect(() => {
     fetch(`https://the-adventurer-server.vercel.app/review/${_id}`)
       .then((res) => res.json())
@@ -31,6 +35,17 @@ const ServiceDetail = () => {
       });
   }, [_id]);
 
+  useEffect(() => {
+    fetch(`https://the-adventurer-server.vercel.app/review/${_id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const specificNewData = reviewData.filter(
+          (item) => item.reviewerName === user?.displayName
+        );
+        setSpecificData(specificNewData);
+      });
+  }, [reviewData]);
+
   // console.log(reviewData);
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,6 +53,18 @@ const ServiceDetail = () => {
     const form = event.target;
     const opinion = form.opinion.value;
     const rating = form.rating.value;
+
+    const reviewService = {
+      reviewItemID: _id,
+      opinion,
+      date: new Date(),
+      picture,
+      placeName,
+      rating,
+      reviewerName: user?.displayName,
+      reviewerPhoto: user?.photoURL,
+      reviewerEmail: user?.email,
+    };
 
     if (!user?.uid) {
       setServiceValidity("Please log in first!!");
@@ -53,17 +80,13 @@ const ServiceDetail = () => {
       return;
     }
 
-    const reviewService = {
-      reviewItemID: _id,
-      opinion,
-      date: new Date(),
-      picture,
-      placeName,
-      rating,
-      reviewerName: user?.displayName,
-      reviewerPhoto: user?.photoURL,
-      reviewerEmail: user?.email,
-    };
+    if (specificData?.length > 0) {
+      setServiceValidity(
+        "You have already reviewed it, visit your reviews to edit."
+      );
+      return;
+    }
+
     // console.log(reviewService);
 
     fetch("https://the-adventurer-server.vercel.app/review", {
@@ -79,6 +102,8 @@ const ServiceDetail = () => {
           toast(
             `You reviewed ${placeName} successfully!! Reload this page to see new reviews`
           );
+          setNewId(data.insertedId);
+          console.log(data);
           form.reset();
           setServiceValidity("");
         }
@@ -86,7 +111,15 @@ const ServiceDetail = () => {
       .catch((err) => console.log(err));
   };
 
-  // reviewData.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
+  useEffect(() => {
+    fetch(`http://localhost:5000/onereview/${newId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const reviewUpdatedData = [...reviewData, data];
+        setReviewData(reviewUpdatedData);
+      });
+  }, [newId]);
+
   reviewData.sort((a, b) => -a.date.localeCompare(b.date));
 
   return (

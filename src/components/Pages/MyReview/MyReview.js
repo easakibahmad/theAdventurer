@@ -41,6 +41,28 @@ const MyReview = () => {
         });
     }
   };
+
+  const handleUpdate = (id, opinion) => {
+    fetch(`http://localhost:5000/review/${id}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ opinion: opinion }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          const remaining = review.filter((rvw) => rvw._id !== id);
+          const newReview = review.find((rvw) => rvw._id === id);
+          newReview.opinion = opinion;
+          const newlyUpdates = [newReview, ...remaining];
+          setReview(newlyUpdates);
+          console.log(newlyUpdates);
+        }
+      });
+  };
   //   console.log(review);
 
   review.sort((a, b) => -a.date.localeCompare(b.date));
@@ -60,6 +82,7 @@ const MyReview = () => {
             <ReviewItem
               key={item._id}
               handleDelete={handleDelete}
+              handleUpdate={handleUpdate}
               item={item}
             ></ReviewItem>
           ))}
