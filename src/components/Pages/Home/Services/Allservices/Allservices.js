@@ -13,6 +13,8 @@ const Allservices = () => {
         setAllServices(data);
       });
   }, []);
+
+  allServices.sort((a, b) => -a.date.localeCompare(b.date));
   return (
     <div className="md:px-12 py-8 shadow-md md:py-16">
       <p className="md:text-4xl md:text-start text-center text-2xl font-bold text-black">

@@ -32,6 +32,7 @@ const Addservice = () => {
       placeName,
       tripDetails,
       rating,
+      date: new Date(),
     };
 
     // console.log(service);
