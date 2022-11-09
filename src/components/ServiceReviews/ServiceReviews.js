@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Context/AuthProvider";
 
-const ReviewItem = ({ item }) => {
+const ServiceReview = ({ item }) => {
   const { user } = useContext(AuthContext);
   const { opinion, reviewerName, reviewerPhoto } = item;
   console.log(user);
@@ -26,4 +26,4 @@ const ReviewItem = ({ item }) => {
   );
 };
 
-export default ReviewItem;
+export default ServiceReview;

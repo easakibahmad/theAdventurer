@@ -1,16 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../../src/components/Pages/Home/Home";
-import Login from "../components/Login/Login";
-import Addservice from "../components/Pages/Addservice/Addservice";
-import Allservices from "../components/Pages/Home/Services/Allservices/Allservices";
-import ServiceDetail from "../components/Pages/ServiceDetail/ServiceDetail";
-import Signup from "../components/Signup/Signup";
-
 import Layout from "../Layout/Layout";
+import Home from "../components/Pages/Home/Home";
+import Allservices from "../components/Pages/Home/Services/Allservices/Allservices";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import Blogs from "../components/Blogs/Blogs";
+import Addservice from "../components/Pages/Addservice/Addservice";
+import ServiceDetail from "../components/Pages/ServiceDetail/ServiceDetail";
 import MyReview from "../components/Pages/MyReview/MyReview";
-import NotFoundRoute from "../components/NotFound/NotFoundRoute";
+import Signup from "../components/Pages/Signup/Signup";
+import NotFoundRoute from "../components/Pages/NotFound/NotFoundRoute";
+import Blogs from "../components/Pages/Blogs/Blogs";
+import Login from "../components/Pages/Login/Login";
 
 export const router = createBrowserRouter([
   {

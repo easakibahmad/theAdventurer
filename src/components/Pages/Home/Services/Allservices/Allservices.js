@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import useTitle from "../../../../../Hooks/useTitle";
 import Service from "../Service/Service";
 
 const Allservices = () => {
+  useTitle("All Services");
   const [allServices, setAllServices] = useState([]);
   useEffect(() => {
     fetch("https://the-adventurer-server.vercel.app/allservices")

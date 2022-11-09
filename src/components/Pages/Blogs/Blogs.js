@@ -1,6 +1,8 @@
 import React from "react";
+import useTitle from "../../../Hooks/useTitle";
 
 const Blogs = () => {
+  useTitle("Blogs");
   return (
     <div className="md:py-16 shadow-md sm:py-12 py-8 lg:px-16 md:px-12 sm:px-8 px-2">
       <h1 className="md:text-4xl text-center sm:text-2xl text-md font-bold text-black">

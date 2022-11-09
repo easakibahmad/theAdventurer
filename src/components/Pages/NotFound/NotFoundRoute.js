@@ -1,8 +1,10 @@
 import React from "react";
 import "./NotFoundRoute.css";
 import { Link } from "react-router-dom";
+import useTitle from "../../../Hooks/useTitle";
 
 const NotFoundRoute = () => {
+  useTitle("Not Found");
   return (
     <div className="text-center w-72 bg-black text-white h-full mx-auto page-not-found py-4 rounded-xl">
       <h1 className="text-xl font-bold text-red-500">OOPS!</h1>

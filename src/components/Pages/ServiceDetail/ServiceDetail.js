@@ -4,9 +4,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
-import ReviewItem from "../../ReviewItem/ReviewItem";
+import useTitle from "../../../Hooks/useTitle";
+import ServiceReview from "../../ServiceReviews/ServiceReviews";
 
 const ServiceDetail = () => {
+  useTitle("Service Detail");
   const individualData = useLoaderData();
   const { _id, picture, placeName, price, rating, tripDetails } =
     individualData;
@@ -134,7 +136,7 @@ const ServiceDetail = () => {
         {reviewData[0]?._id ? (
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 grid-cols-1 pt-6">
             {reviewData.map((item) => (
-              <ReviewItem key={item._id} item={item}></ReviewItem>
+              <ServiceReview key={item._id} item={item}></ServiceReview>
             ))}
           </div>
         ) : (
