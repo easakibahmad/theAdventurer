@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { AuthContext } from "../../../../Context/AuthProvider";
+import React from "react";
+import "./ServiceReviews.css";
 
 const ServiceReview = ({ item }) => {
-  const { user } = useContext(AuthContext);
-  const { opinion, reviewerName, reviewerPhoto } = item;
-  console.log(user);
+  const { opinion, date, reviewerName, reviewerPhoto } = item;
+  // console.log(user);
   return (
     <div className="border w-4/5 mx-auto p-2 rounded">
       <div className="flex justify-start items-center">
@@ -18,10 +17,11 @@ const ServiceReview = ({ item }) => {
         <div className="pl-2 font-bold">{reviewerName}</div>
       </div>
       <div className="text-sm pt-2">
-        <span>'</span>
+        <span>"</span>
         {opinion}
-        <span>'</span>
+        <span>"</span>
       </div>
+      <div className="review-date">{date.slice(0, 10)}</div>
     </div>
   );
 };

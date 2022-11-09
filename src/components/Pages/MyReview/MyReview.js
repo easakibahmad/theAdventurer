@@ -42,6 +42,9 @@ const MyReview = () => {
     }
   };
   //   console.log(review);
+
+  review.sort((a, b) => -a.date.localeCompare(b.date));
+
   return (
     <div className="md:py-16 shadow-md sm:py-12 py-8 lg:px-12 sm:px-8 px-2">
       {loadData && <AnotherLoader></AnotherLoader>}

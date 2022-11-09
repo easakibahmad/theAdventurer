@@ -4,7 +4,7 @@ import "./ReviewItem.css";
 
 const ReviewItem = ({ item, handleDelete }) => {
   //   console.log(item);
-  const { _id, placeName, picture, opinion, rating } = item;
+  const { _id, date, placeName, picture, opinion, rating } = item;
   // console.log(item);
   return (
     <div className="border sm:w-full w-3/5 mx-auto rounded">
@@ -16,6 +16,7 @@ const ReviewItem = ({ item, handleDelete }) => {
           <AiFillStar></AiFillStar>
         </div>
         <div className="text-sm">'{opinion}'</div>
+        <div className="review-date">{date.slice(0, 10)}</div>
         <div className="mt-auto">
           <div className="mt-2">
             <button
