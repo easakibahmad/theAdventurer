@@ -11,6 +11,8 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+  services.sort((a, b) => -a.date.localeCompare(b.date));
+
   return (
     <div className="md:px-12 py-8 md:py-16 shadow-md">
       <p className="md:text-4xl text-center md:text-start text-2xl font-bold text-black">
