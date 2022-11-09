@@ -4,11 +4,14 @@ import ReviewItem from "./ReviewItem/ReviewItem";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useTitle from "../../../Hooks/useTitle";
+import AnotherLoader from "../../Loader/AnotherLoader";
 
 const MyReview = () => {
   useTitle("My Reviews");
   const { user } = useContext(AuthContext);
   const [review, setReview] = useState([]);
+
+  const [loadData, setLoadData] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -16,6 +19,7 @@ const MyReview = () => {
     )
       .then((res) => res.json())
       .then((data) => {
+        setLoadData(false);
         setReview(data);
       });
   }, [user?.email]);
@@ -40,12 +44,8 @@ const MyReview = () => {
   //   console.log(review);
   return (
     <div className="md:py-16 shadow-md sm:py-12 py-8 lg:px-12 sm:px-8 px-2">
-      {!review[0]?._id && (
-        <div className="md:text-4xl sm:text-2xl text-center text-xl font-bold text-black">
-          <span className="text-red-400">No review</span> found yet
-        </div>
-      )}
-      {review[0]?._id && (
+      {loadData && <AnotherLoader></AnotherLoader>}
+      {!loadData && (
         <p className="md:text-4xl text-center sm:text-2xl text-xl font-bold text-black">
           You have a total of{" "}
           <span className="text-red-400">{review.length} reviews</span>

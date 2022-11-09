@@ -28,6 +28,7 @@ const Login = () => {
 
     logIn(email, password)
       .then((result) => {
+        setLoading(false);
         const user = result.user;
         console.log(user);
         form.reset();
