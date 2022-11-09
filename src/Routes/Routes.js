@@ -10,6 +10,7 @@ import Layout from "../Layout/Layout";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Blogs from "../components/Blogs/Blogs";
 import MyReview from "../components/Pages/MyReview/MyReview";
+import NotFoundRoute from "../components/NotFound/NotFoundRoute";
 
 export const router = createBrowserRouter([
   {
@@ -46,7 +47,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/myreview",
-        element: <MyReview></MyReview>,
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -58,4 +63,5 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  { path: "*", element: <NotFoundRoute></NotFoundRoute> },
 ]);

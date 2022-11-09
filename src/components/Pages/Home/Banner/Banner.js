@@ -30,7 +30,7 @@ const Banner = () => {
         </div>
         <div className="flex justify-center lg:pt-16 sm:pt-12 pt-10">
           {user?.uid ? (
-            <Link>
+            <Link to="/allservices">
               <button className="btn btn-accent text-black">
                 <span className="pr-2">Explore Our Services</span>{" "}
                 <span className="text-xl">
