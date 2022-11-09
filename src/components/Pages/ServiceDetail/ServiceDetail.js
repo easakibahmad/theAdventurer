@@ -99,11 +99,10 @@ const ServiceDetail = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          toast(
-            `You reviewed ${placeName} successfully!! Reload this page to see new reviews`
-          );
-          setNewId(data.insertedId);
-          console.log(data);
+          toast(`You reviewed ${placeName} successfully!!`);
+          setNewId(data?.insertedId);
+          // newId = data.insertedId;
+          // console.log(data);
           form.reset();
           setServiceValidity("");
         }
@@ -112,7 +111,7 @@ const ServiceDetail = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/onereview/${newId}`)
+    fetch(`https://the-adventurer-server.vercel.app/onereview/${newId}`)
       .then((res) => res.json())
       .then((data) => {
         const reviewUpdatedData = [...reviewData, data];

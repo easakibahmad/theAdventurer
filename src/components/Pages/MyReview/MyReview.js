@@ -43,7 +43,7 @@ const MyReview = () => {
   };
 
   const handleUpdate = (id, opinion) => {
-    fetch(`http://localhost:5000/review/${id}`, {
+    fetch(`https://the-adventurer-server.vercel.app/review/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -52,14 +52,14 @@ const MyReview = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.acknowledged) {
           const remaining = review.filter((rvw) => rvw._id !== id);
           const newReview = review.find((rvw) => rvw._id === id);
           newReview.opinion = opinion;
           const newlyUpdates = [newReview, ...remaining];
           setReview(newlyUpdates);
-          console.log(newlyUpdates);
+          // console.log(newlyUpdates);
         }
       });
   };

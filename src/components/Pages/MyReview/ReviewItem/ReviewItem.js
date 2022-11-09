@@ -25,7 +25,7 @@ const ReviewItem = ({ item, handleDelete, handleUpdate }) => {
     }
     setValidOpinion("");
     handleUpdate(_id, opinion);
-    console.log(_id);
+    // console.log(_id);
     form.reset();
     toast(
       `Opinion updated successfully!! Thank You. Please close the modal now.`

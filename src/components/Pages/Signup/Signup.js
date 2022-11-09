@@ -22,7 +22,7 @@ const Signup = () => {
     const password = form.password.value;
     const name = form.name.value;
     const photoURL = form.photoURL.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     const profile = {
       displayName: name,
@@ -47,8 +47,8 @@ const Signup = () => {
     createUser(email, password)
       .then((result) => {
         setLoading(false);
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+        // console.log(user);
         form.reset();
         setError("");
         form.reset();

@@ -30,8 +30,8 @@ const Login = () => {
 
     logIn(email, password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+        // console.log(user);
         form.reset();
         setError("");
         navigate(from, { replace: true });
