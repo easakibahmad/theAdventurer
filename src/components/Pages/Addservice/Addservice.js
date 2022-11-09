@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useTitle from "../../../Hooks/useTitle";
 
 const Addservice = () => {
   useTitle("Add Service");
+
+  const [serviceValidity, setServiceValidity] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -14,6 +16,15 @@ const Addservice = () => {
     const placeName = form.placename.value;
     const tripDetails = form.tripDetails.value;
     const rating = form.rating.value;
+
+    if (price < 0) {
+      setServiceValidity("Trip cost should be positive number");
+      return;
+    }
+    if (rating < 1 || rating > 5) {
+      setServiceValidity("Rating should be a number between 1 to 5");
+      return;
+    }
 
     const service = {
       picture,
@@ -37,7 +48,7 @@ const Addservice = () => {
       .then((data) => {
         if (data.acknowledged) {
           toast(`Service added successfully!!`);
-
+          setServiceValidity("");
           form.reset();
         }
       })
@@ -67,14 +78,14 @@ const Addservice = () => {
             required
           />
           <input
-            type="text"
+            type="number"
             placeholder="Provide the place trip cost"
             name="price"
             className="input input-bordered my-2 input-accent w-full"
             required
           />
           <input
-            type="text"
+            type="number"
             placeholder="Type a rating (should be a number between 1-5)"
             name="rating"
             className="input input-bordered my-2 input-accent w-full"
@@ -86,6 +97,7 @@ const Addservice = () => {
             name="tripDetails"
             required
           ></textarea>
+          <p className="text-red-400 font-bold my-2">{serviceValidity}</p>
           <div className="flex justify-center">
             <button className="bg-red-400 px-3 py-2 font-bold mt-2 rounded-md text-sm">
               Add service
