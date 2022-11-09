@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
 import useTitle from "../../../Hooks/useTitle";
-import ServiceReview from "../../ServiceReviews/ServiceReviews";
+import ServiceReview from "./ServiceReviews/ServiceReviews";
 
 const ServiceDetail = () => {
   useTitle("Service Detail");
@@ -35,6 +35,15 @@ const ServiceDetail = () => {
 
     if (!user?.uid) {
       setServiceValidity("Please log in first!!");
+      return;
+    }
+
+    if (opinion === "" || rating === "" || (opinion === "" && rating === "")) {
+      setServiceValidity("Please fill out above fields carefully!!");
+      return;
+    }
+    if (rating < 1 || rating > 5) {
+      setServiceValidity("Rating should be a number between 1 to 5");
       return;
     }
 
@@ -155,14 +164,12 @@ const ServiceDetail = () => {
                 className="textarea textarea-accent my-2 w-full"
                 placeholder="Write your opinion"
                 name="opinion"
-                required
               ></textarea>
               <input
-                type="text"
+                type="number"
                 placeholder="Type a rating (should be a number between 1-5)"
                 name="rating"
                 className="input input-bordered my-2 input-accent w-full"
-                required
               />
               <p className="text-red-400 font-bold my-2">{serviceValidity}</p>
               <div className="flex justify-center">
