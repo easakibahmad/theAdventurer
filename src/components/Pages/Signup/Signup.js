@@ -49,8 +49,8 @@ const Signup = () => {
     createUser(email, password)
       .then((result) => {
         setLoading(false);
-        // const user = result.user;
-        // console.log(user);
+        const user = result.user;
+        console.log(user);
         form.reset();
         setError("");
         form.reset();

@@ -15,7 +15,12 @@ const MyReview = () => {
 
   useEffect(() => {
     fetch(
-      `https://the-adventurer-server.vercel.app/review?email=${user?.email}`
+      `https://the-adventurer-server.vercel.app/review?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("adventureToken")}`,
+        },
+      }
     )
       .then((res) => res.json())
       .then((data) => {
