@@ -4,6 +4,7 @@ import Banner from "./Banner/Banner";
 import ExploreMore from "./ExploreMore/ExploreMore";
 import "./Home.css";
 import Services from "./Services/Services";
+import Vacation from "./Vacation/Vacation";
 
 const Home = () => {
   useTitle("Home");
@@ -17,6 +18,9 @@ const Home = () => {
       </div>
       <div>
         <ExploreMore></ExploreMore>
+      </div>
+      <div>
+        <Vacation></Vacation>
       </div>
     </div>
   );
