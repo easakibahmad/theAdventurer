@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthProvider";
+import useTitle from "../../../Hooks/useTitle";
 import AnotherLoader from "../../Loader/AnotherLoader";
 
 const Signup = () => {
+  useTitle("Signup");
   const [error, setError] = useState();
 
   const location = useLocation();

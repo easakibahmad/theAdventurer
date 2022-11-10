@@ -53,12 +53,14 @@ const ReviewItem = ({ item, handleDelete, handleUpdate }) => {
             </button>
           </div>
           <div className="mt-2">
-            <label
-              htmlFor="update-modal"
-              className="custom-button text-sm border py-1 px-2 bg-red-400 font-bold rounded-md"
-            >
-              Edit this review?
-            </label>
+            <button>
+              <label
+                htmlFor="update-modal"
+                className="custom-button text-sm border py-1 px-2 bg-red-400 font-bold rounded-md"
+              >
+                Edit this review?
+              </label>
+            </button>
 
             <input type="checkbox" id="update-modal" className="modal-toggle" />
             <div className="modal">

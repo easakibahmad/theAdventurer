@@ -11,6 +11,7 @@ I have used some popular features in my app
 * Firebase for hosting and authentication(email/password, google)
 * Vanilla CSS
 * Tailwind CSS
+* React-photo-view
 * Google Fonts
 * DaisyUI(Tailwind CSS components library)
 * React icons

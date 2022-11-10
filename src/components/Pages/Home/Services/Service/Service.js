@@ -4,17 +4,32 @@ import { ImCircleRight } from "react-icons/im";
 import avatar from "../../../../../assets/images/avatar.webp";
 import "./Service.css";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const Service = ({ service }) => {
   const { _id, picture, placeName, price, tripDetails, rating } = service;
   return (
     <div className="flex justify-center">
       <div className="border-r-red-700  rounded-xl bg-black text-white w-4/5 sm:w-64 md:w-full">
-        <img
+        <PhotoProvider>
+          <PhotoView
+            className="w-full rounded lg:h-48  h-36"
+            alt=""
+            src={picture ? picture : avatar}
+          >
+            <img
+              src={picture ? picture : avatar}
+              alt=""
+              className="w-full rounded lg:h-48  h-36"
+            />
+          </PhotoView>
+        </PhotoProvider>
+        {/* <img
           className="w-full rounded lg:h-48  h-36"
           src={picture ? picture : avatar}
           alt=""
-        />
+        /> */}
         <div className="p-2">
           <div className="font-bold md:text-xl text-md text-red-400">
             {placeName}
