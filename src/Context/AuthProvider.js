@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
-    // localStorage.removeItem("adventureToken");
+    localStorage.removeItem("adventureToken");
     setLoading(true);
     return signOut(auth);
   };

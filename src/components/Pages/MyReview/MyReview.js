@@ -40,7 +40,11 @@ const MyReview = () => {
       fetch(`https://the-adventurer-server.vercel.app/review/${id}`, {
         method: "DELETE",
       })
-        .then((res) => res.json())
+        .then((res) => {
+          if (res.status === 401) {
+            res.json();
+          }
+        })
         .then((data) => {
           // console.log(data);
           if (data.deletedCount > 0) {
