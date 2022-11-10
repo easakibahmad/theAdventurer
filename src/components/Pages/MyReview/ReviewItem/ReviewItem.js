@@ -25,7 +25,8 @@ const ReviewItem = ({ item, handleDelete, handleUpdate }) => {
     }
     setValidOpinion("");
     handleUpdate(_id, opinion);
-    // console.log(_id);
+    // console.log(_id, opinion);
+
     form.reset();
     toast(
       `Opinion updated successfully!! Thank You. Please close the modal now.`
@@ -86,19 +87,6 @@ const ReviewItem = ({ item, handleDelete, handleUpdate }) => {
                         </label>
                       </div>
                     </div>
-
-                    <ToastContainer
-                      position="top-center"
-                      autoClose={2000}
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                      theme="light"
-                    ></ToastContainer>
                   </div>
                 </form>
               </div>

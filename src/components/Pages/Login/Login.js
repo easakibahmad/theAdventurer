@@ -62,7 +62,7 @@ const Login = () => {
       {loading ? (
         <AnotherLoader></AnotherLoader>
       ) : (
-        <div className=" p-16 shadow-md">
+        <div className=" sm:p-16 py-4 shadow-md">
           <div className="hero">
             <div data-theme="forest" className="hero-content rounded flex-col">
               <div className="text-center lg:text-left">

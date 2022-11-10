@@ -9,6 +9,7 @@ import "react-photo-view/dist/react-photo-view.css";
 
 const Service = ({ service }) => {
   const { _id, picture, placeName, price, tripDetails, rating } = service;
+
   return (
     <div className="flex justify-center">
       <div className="border-r-red-700  rounded-xl bg-black text-white w-4/5 sm:w-64 md:w-full">
@@ -37,20 +38,11 @@ const Service = ({ service }) => {
             <div className="md:text-2xl text-md font-bold text-red-400">
               {price}$
             </div>
-            <div className="flex items-center text-yellow-500">
-              <div className="pr-2">{rating}</div>
+            <div id="card-div" className="flex items-center text-yellow-500">
+              <div className="pr-1">{rating}</div>
               <div>
                 <AiFillStar></AiFillStar>
-              </div>
-              <div>
-                <AiFillStar></AiFillStar>
-              </div>
-              <div>
-                <AiFillStar></AiFillStar>
-              </div>
-              <div>
-                <AiFillStar></AiFillStar>
-              </div>
+              </div>{" "}
             </div>
           </div>
           <div className="flex justify-start py-2">

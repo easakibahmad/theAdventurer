@@ -55,7 +55,9 @@ const MyReview = () => {
         // console.log(data);
         if (data.acknowledged) {
           const remaining = review.filter((rvw) => rvw._id !== id);
+          // console.log(remaining);
           const newReview = review.find((rvw) => rvw._id === id);
+          // console.log(newReview);
           newReview.opinion = opinion;
           const newlyUpdates = [newReview, ...remaining];
           setReview(newlyUpdates);
