@@ -8,7 +8,7 @@ import AnotherLoader from "../../Loader/AnotherLoader";
 
 const MyReview = () => {
   useTitle("My Reviews");
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [review, setReview] = useState([]);
 
   const [loadData, setLoadData] = useState(true);
@@ -22,12 +22,17 @@ const MyReview = () => {
         },
       }
     )
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          return logOut();
+        }
+        return res.json();
+      })
       .then((data) => {
         setLoadData(false);
         setReview(data);
       });
-  }, [user?.email]);
+  }, [user?.email, logOut]);
 
   const handleDelete = (id) => {
     const proceedToDelete = window.confirm("Are you sure to delete?");
