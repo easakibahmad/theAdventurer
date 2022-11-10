@@ -13,16 +13,14 @@ const Service = ({ service }) => {
     <div className="flex justify-center">
       <div className="border-r-red-700  rounded-xl bg-black text-white w-4/5 sm:w-64 md:w-full">
         <PhotoProvider>
-          <PhotoView
-            className="w-full rounded lg:h-48  h-36"
-            alt=""
-            src={picture ? picture : avatar}
-          >
-            <img
-              src={picture ? picture : avatar}
-              alt=""
-              className="w-full rounded lg:h-48  h-36"
-            />
+          <PhotoView src={picture ? picture : avatar}>
+            <Link>
+              <img
+                src={picture ? picture : avatar}
+                alt=""
+                className="w-full rounded lg:h-48  h-36"
+              />
+            </Link>
           </PhotoView>
         </PhotoProvider>
         {/* <img
